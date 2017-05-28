@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="shortcut icon" href="crap/yellow.ico"/>
+		<title>ROOM | the end</title>
+        
+        <script src=//code.jquery.com/jquery-3.2.1.min.js></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        <script src="typed.js" type="text/javascript"></script>
+      <!--type -->
+      <script>
+    document.addEventListener('DOMContentLoaded', function(){
+
+        Typed.new("#typed", {
+            stringsElement: document.getElementById('typed-strings'),
+            typeSpeed: 200,
+            backDelay: 7000,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to null for infinite loop
+            loopCount: null,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+            });
+
+            var resetElement = document.querySelector('.reset');
+            if(resetElement) {
+            resetElement.addEventListener('click', function() {
+                document.getElementById('typed')._typed.reset();
+                });
+            }
+
+          });
+
+          function newTyped(){ /* A new typed object */ }
+
+          function foo(){ console.log("Callback"); }
+        
+
+      </script>
+      <!--type -->
+
+      
+    <link rel='stylesheet' type='text/css'  href='style.css'/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    	</head>
+	<body>
+      
+    
+        <div class='fixed'>
+        
+      
+        <div class='map'>
+          <div id='title'><span>the<br>end</span></div>
+            <div id='room_map'>
+            <img id='room' src='crap/room.png'>
+            <div id='location'></div>
+          </div>
+          
+          <!--moving-->
+        <div class="movingtop">
+        <div class='next'>
+          <div id="next_arrow"><a href="#"></a></div>
+        </div>
+        <div class='back'>
+          <div id='back_arrow'><a href="#"></a></div>
+        </div>
+        </div>  
+          <!--type-->
+        <div>
+        <span id='start_type'></span>
+        <div class="type-wrap">
+            <div id="typed-strings">
+                <span>souvenirs</span>
+                <span>before we say goodbye</span>
+                <span>souvenirs</span>
+                <span>before we say goodbye</span>
+                
+            </div>
+            <span id="typed" style="white-space:pre;"></span>
+        </div>
+        </div> 
+          <div>
+          <p id="contact">talk to me</p>  
+          <span id="mail">im.hiding.in.room@gmail.com</span>  
+          <p id="info">twenty. student. live with parents<br>hochiminh city vietnam<br>name is tran thanh thao</p>
+          </div>  
+           
+        </div>
+        </div>  
+        <!-- contain -->
+        <div class="container">
+        
+        
+        <p>I was so certain<br>I was wise<br>For a long time<br>Defined my life's meaning<br>I was all<br>all of your every right<br>I planned my every step<br>I figured I hadn't ever enjoyed the fun<br>I took my turn<br><img src="/crap/133.png"></p>
+        
+        <p><span id="age">13</span><br>
+        Plans were just fading away<br>I'm the master of my silence<br><img src="/crap/16.png"></p>
+        <p><span id="age">16</span>
+        I started to prefer</p>
+        <p><span id="age">19</span><br>
+        "No disappointment<br>This is pure beauty"<br>Room<br>My triple life<br><img src="/crap/19.png"></p>
+        
+        <p><br>I wouldn't change a thing</p>  
+        
+                
+        <div class='footer'>
+          <p>ROOM | ONE FUCKED UP KID</p>
+        </div>
+        
+      
+        <div class="mapbottom">
+        <div class="movingbottom"></div>
+          
+          <div class='nextbottom'>
+          <div id="next_arrow"><a href="#"></a></div>
+          </div>
+      
+          <div class='backbottom'>
+          <div id='back_arrow'><a href="#"></a></div>
+        </div>
+        </div>  
+        </div>    
+      
+      
+        <script>
+        setInterval(function(){blink()}, 10);
+        function blink() {
+        $("#location").fadeTo('slow', 0.5).fadeTo('slow', 1.0);
+        };
+        function loadswitharrow(){
+        }
+
+          $(document).ready(function(){
+              $(".map").animate({
+                 opacity: 1,
+                 left: "+=10",
+              }, 900, function() {
+              });
+            
+              $(".container").animate({
+                 opacity: 1,
+                 
+              }, 1200, function() {
+              });
+            
+              $("#next_tag").hide();
+              $(".map").addClass("fixed");            
+              $(".next").hover(function () {
+                  $("#next_tag").fadeToggle();
+              });
+              $('#contact').click(function(){
+                  $('#mail, #info').fadeToggle();
+              })
+          });
+        </script>          
+	</body>
+</html>
